@@ -1,0 +1,9 @@
+.strategy-table {
+  display: flex;
+  flex-direction: column;
+}
+
+.strategy-table-row {
+  display: flex;
+  flex-direction: row;
+}
