@@ -1,37 +1,18 @@
 import { Route, Routes, useLocation } from "react-router-dom";
-import Home from "./HomeComponents/Home";
 import Play from "./PlayComponents/Play";
 import "./App.css";
 import { useEffect, useState } from "react";
 import Game from "./GameComponents/Game";
 import {
   BankrollSettingsObject,
-  DealerSettingsObject,
   CountingSettingsObject,
   GameSettingsObject,
   StrategySettingsObject,
 } from "./SettingsObjects";
-import Calculator from "./CalculatorComponents/Calculator";
 
 function App() {
   const EMPTY = -100;
   const location = useLocation();
-
-  const [dealerSettingsObject, setDealerSettingsObject] =
-    useState<DealerSettingsObject>({
-      decks: 6,
-      S17: true,
-      ENHC: false,
-      DAS: true,
-      doubles: [
-        2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
-      ],
-      splits: 3,
-      LS: true,
-      BJPay: 1.5,
-      RSA: false,
-      drawAces: false,
-    });
 
   const [gameSettingsObject, setGameSettingsObject] =
     useState<GameSettingsObject>({
@@ -227,17 +208,14 @@ function App() {
 
   useEffect(() => {
     document.body.style.backgroundColor =
-      location.pathname === "/play-settings" || location.pathname === "/game"
-        ? "#121212"
-        : "white";
+      location.pathname === "/game" ? "#121212" : "white";
   }, [location]);
 
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home />} />
         <Route
-          path="/play-settings"
+          path="/"
           element={
             <Play
               gameSettingsObject={gameSettingsObject}
@@ -262,16 +240,6 @@ function App() {
             />
           }
         />
-        <Route
-          path="/calculator"
-          element={
-            <Calculator
-              dealerSettingsObject={dealerSettingsObject}
-              setDealerSettingsObject={setDealerSettingsObject}
-            />
-          }
-        />
-        <Route path="/sim" element={<div>Coming Soon!</div>} />
       </Routes>
     </div>
   );

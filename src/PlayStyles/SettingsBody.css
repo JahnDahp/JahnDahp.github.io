@@ -26,10 +26,18 @@
   border-color: #282828;
 }
 
+.settings-body-label {
+  flex: 1;
+  min-width: 0;
+  padding-right: 16px;
+  word-wrap: break-word;
+}
+
 .settings-body-dropdown {
   font-size: 1.2rem;
   cursor: pointer;
   width: 160px;
+  flex-shrink: 0;
 }
 
 .settings-body-playing-cards {
@@ -50,12 +58,14 @@
   font-size: 1.2rem;
   cursor: pointer;
   width: 160px;
+  flex-shrink: 0;
 }
 
 .settings-body-textbox {
   font-size: 1.2rem;
   cursor: pointer;
   width: 160px;
+  flex-shrink: 0;
 }
 
 .settings-body-table {

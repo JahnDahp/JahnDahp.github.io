@@ -6,6 +6,8 @@
 .irc-pair {
   display: flex;
   flex-direction: column;
+  width: 140px;
+  flex-shrink: 0;
 }
 
 .irc-pair-textbox {

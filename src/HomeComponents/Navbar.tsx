@@ -7,16 +7,7 @@ const Navbar = () => {
       <div className="navbar-logo">Blackjack Online</div>
       <ul className="navbar-links">
         <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/play-settings">Play</Link>
-        </li>
-        <li>
-          <Link to="/calculator">Calculate</Link>
-        </li>
-        <li>
-          <Link to="/sim">Simulate</Link>
+          <Link to="/">Settings</Link>
         </li>
       </ul>
     </nav>
