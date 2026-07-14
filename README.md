@@ -35,5 +35,4 @@ Tools used
   - React
   - TypeScript
   - Vite
-  - GitHub Actions (build and deploy on push to main)
   - GitHub Pages
