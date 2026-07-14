@@ -20,7 +20,7 @@ const HandOver = ({
   setShowDeviationErrorMessage,
   setBlackjackGame,
 }: Props) => {
-  const [betInput, setBetInput] = useState("");
+  const [betInput, setBetInput] = useState(String(bankrollSettingsObject.tableMin));
 
   function refreshGame() {
     setBlackjackGame((prev) =>
